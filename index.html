@@ -22,16 +22,16 @@
     </style>
   </head>
   <body>
-    <h2>🔐 Réinitialisation du mot de passe - 90Hz Messages</h2>
-    <p>Copiez le code ci-dessous et collez-le dans votre terminal :</p>
-    <pre id="token">Chargement...</pre>
+    <h2>🔐 reseting Password... (sorry for bad english) - 90Hz Messages</h2>
+    <p>Paste the code down in ur terminal :</p>
+    <pre id="token">Loading...</pre>
 
     <script>
       const fragment = new URLSearchParams(window.location.hash.substring(1));
       const token = fragment.get("access_token");
       document.getElementById("token").textContent = token
         ? token
-        : "⚠️ Aucun token trouvé. Vérifiez que vous avez ouvert le bon lien depuis votre e-mail.";
+        : "Unable to find a token, make sure you opened this link by a reset Password email";
     </script>
   </body>
 </html>
