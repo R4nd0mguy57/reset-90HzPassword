@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>90Hz Messages - Reset Password</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #0e1117;
+        color: #f0f0f0;
+        text-align: center;
+        padding: 40px;
+      }
+      pre {
+        background: #1a1f29;
+        color: #00ff9d;
+        padding: 15px;
+        border-radius: 8px;
+        word-wrap: break-word;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>🔐 Réinitialisation du mot de passe - 90Hz Messages</h2>
+    <p>Copiez le code ci-dessous et collez-le dans votre terminal :</p>
+    <pre id="token">Chargement...</pre>
+
+    <script>
+      const fragment = new URLSearchParams(window.location.hash.substring(1));
+      const token = fragment.get("access_token");
+      document.getElementById("token").textContent = token
+        ? token
+        : "⚠️ Aucun token trouvé. Vérifiez que vous avez ouvert le bon lien depuis votre e-mail.";
+    </script>
+  </body>
+</html>
